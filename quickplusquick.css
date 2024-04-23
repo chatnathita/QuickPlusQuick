@@ -1,0 +1,856 @@
+.hide{
+    display: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 220, 168);
+}
+#title{
+    position: relative;
+    bottom: 130px;
+    @media screen and (max-width: 450px){
+        left: 20px;
+    }
+    @media screen and (max-width: 375px){
+        left: 0px;
+    }
+    @media screen and (max-width: 320px){
+        left: 0px;
+    }
+}
+#title1{
+    font-size: x-large;
+    @media screen and (max-width: 450px){
+        font-size: x-large;
+    }
+    @media screen and (max-width: 375px){
+        font-size: large;
+    }
+    @media screen and (max-width: 320px){
+        font-size: medium;
+    }
+}
+#title2{
+    font-size: 60px;
+    @media screen and (max-width: 450px){
+        font-size: 40px;
+    }
+    @media screen and (max-width: 375px){
+        font-size: xx-large;
+    }
+    @media screen and (max-width: 320px){
+        font-size: x-large;   
+    }
+}
+#op{
+    position: relative;
+    left: 50px;
+    bottom: 40px;
+    @media screen and (max-width: 450px){
+        left: 30px;
+    }
+    @media screen and (max-width: 375px){
+        left: 30px; 
+    }
+    @media screen and (max-width: 320px){
+        left: 0px; 
+    }
+}
+#plusbtn,#minusbtn{
+    font-size: xx-large;
+    width: 60px;
+    height: 60px;
+    background-color: #f1ad6c;
+    color: #00001d;
+    border: 1px solid #00001d;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    @media screen and (max-width: 450px){
+        font-size: x-large;
+        width: 55px;
+        height: 55px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    @media screen and (max-width: 375px){
+        font-size: large;
+        width: 45px;
+        height: 45px;   
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    @media screen and (max-width: 320px){
+        font-size: large;
+        width: 30px;
+        height: 30px;   
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+}
+#plusbtn:hover,#minusbtn:hover{
+    color: #6e6e6e;
+    background-color: #ffc98c;
+}
+#plusbtn.selected,#minusbtn.selected{
+    border: 3px solid rgb(0, 122, 0);
+    @media screen and (max-width: 320px){
+        border: 2px solid green; 
+    }
+}
+#plusbtn.unselected,#minusbtn.unselected,#answer.unselected{
+    border: 2px solid red;
+}
+#diff{
+    text-align: center;
+    font-size: x-large;
+    color: #203477;
+    line-height: 40px;
+    position: relative;
+    bottom: 40px;
+    right: 30px;
+    @media screen and (max-width: 450px){
+        font-size: x-large;
+        left: 0px;
+    }
+    @media screen and (max-width: 375px){
+        font-size: x-large;
+        left: 0px;
+    }
+    @media screen and (max-width: 320px){
+        font-size: large;
+        left: 0px;
+    }
+}
+#eazybtn,#normalbtn,#hardbtn{
+    width: 60px;
+    height: 40px;
+    font-size: large;
+    border-radius: 10px;
+    background-color: #d1fcff;
+    @media screen and (max-width: 450px){
+        font-size: large;
+        width: 70px;
+        height: 45px;   
+    }
+    @media screen and (max-width: 375px){
+        font-size: medium;
+        width: 60px;
+        height: 40px;   
+    }
+    @media screen and (max-width: 320px){
+        font-size: small;
+        width: 50px;
+        height: 30px;   
+    }
+}
+#eazybtn.selected,#normalbtn.selected,#hardbtn.selected{
+    background-color: #00da2f;
+}
+#timeselec{
+    font-size: x-large;
+    position: relative;
+    top: 120px;
+    left: 125px;
+    @media screen and (max-width: 450px){
+        font-size: x-large;
+         left: 65px;
+    }
+    @media screen and (max-width: 375px){
+        font-size: large;
+         left: 40px;
+    }
+    @media screen and (max-width: 320px){
+        font-size: large;   
+        left: 20px;
+    }
+}
+#timein{
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    background-color: #ffba7a;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: x-large;
+    @media screen and (max-width: 375px){
+        font-size: medium;
+        width: 120px;   
+    }
+    @media screen and (max-width: 320px){
+        font-size: medium;
+        width: 80px;   
+    }
+}
+#startbtn{
+    width: 200px;
+    height: 60px;
+    background-color: rgb(248, 91, 91);
+    color: white;
+    border-radius: 25px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    font-size: xx-large;
+    margin-top: 20px;
+    position: relative;
+    top: 100px;
+    left: 150px;
+    letter-spacing: 3px;
+    @media screen and (max-width: 450px){
+        font-size: x-large;   
+        width: 140px;
+        height: 50px;
+        top: 100px;
+        left: 125px;
+    }
+    @media screen and (max-width: 375px){
+        font-size: x-large;   
+        width: 125px;
+        height: 50px;
+        top: 100px;
+        left: 90px;
+    }
+    @media screen and (max-width: 320px){
+        font-size: x-large;   
+        width: 125px;
+        height: 50px;
+        top: 100px;
+        left: 50px;
+    }
+}
+#startbtn:hover,#again:hover{
+    color: #bebebe;
+    background-color: #ff4545;
+}
+#recordbtn{
+    width: 150px;
+    height: 40px;
+    font-size: larger;
+    border-radius: 20px;
+    position: relative;
+    left: 175px;
+    top: 150px;
+    @media screen and (max-width: 450px){
+        left: 120px;
+    }
+    @media screen and (max-width: 375px){
+        left: 75px;
+    }
+    @media screen and (max-width: 320px){
+        left: 30px;
+    }
+}
+#titlename{
+    color: #1e2750;
+    font-size: x-large;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    @media screen and (max-width: 450px){
+        font-size: x-large;
+        left: 10px;   
+    }
+    @media screen and (max-width: 375px){
+        font-size: larger;
+        left: 10px;
+    }
+    @media screen and (max-width: 320px){
+        font-size: larger;
+        left: 10px;
+    }
+
+}
+#question{
+    width: 800px;
+    height: 100px;
+    color: #271e66;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px 10px;
+    border: 2px solid black;
+    margin-bottom: 35%;
+    font-size: 100px;
+    text-align: center;
+    letter-spacing: 15px;
+    @media screen and (max-width: 450px){
+        width: 350px;
+        height: 50px;
+        font-size: 75px;
+        letter-spacing: 15px;
+        position: relative;
+        left: 0px;
+        bottom: 30px;
+    }
+    @media screen and (max-width: 375px){
+        width: 280px;
+        height: 50px;
+        font-size: 60px;
+        letter-spacing: 10px;
+        position: relative;
+        left: 0px;
+        bottom: 30px;
+    }
+    @media screen and (max-width: 320px){
+        width: 250px;
+        height: 50px;
+        font-size: 50px;
+        letter-spacing: 5px;
+        position: relative;
+        left: 0px;
+        bottom: 30px;
+    }
+}
+#input{
+    position: relative;
+    bottom: 250px;
+    left: 140px;
+    @media screen and (max-width: 450px){
+        left: 30px;
+        bottom: 80px;
+    }
+    @media screen and (max-width: 375px){
+        left: 25px;
+        bottom: 60px;
+    }
+    @media screen and (max-width: 320px){
+        left: 20px;
+        bottom: 60px;
+    }
+
+}
+#answer{
+    width: 400px;
+    height: 50px;
+    background-color: #ffba7a;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: x-large;
+    text-align: center;
+    @media screen and (max-width: 450px){
+        width: 200px;
+        height: 50px;  
+    }
+    @media screen and (max-width: 375px){
+        width: 170px;
+        height: 45px;
+    }
+    @media screen and (max-width: 320px){
+        width: 150px;
+        height: 40px;
+    }
+}
+#submit{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #922d2d;
+    color: white;
+    font-size: x-large;
+    position: relative;
+    left: 15px;
+    text-align: center;
+    @media screen and (max-width: 450px){
+        width: 80px;
+        height: 50px;  
+        font-size: x-large;
+    }
+    @media screen and (max-width: 375px){
+        width: 70px;
+        height: 45px;
+        font-size: large;
+    }
+    @media screen and (max-width: 320px){
+        width: 60px;
+        height: 40px;
+        font-size: large;
+    }
+}
+#submit:hover{
+    background-color: #be2e2e;
+    color: #c9c9c9;
+}
+#score{
+    color: #1e2750;
+    font-size: x-large;
+    position: relative;
+    left: 300px;
+    bottom: 180px;
+    @media screen and (max-width: 450px){
+        position: relative;
+        left: 70px;
+        top: 20px;
+    }
+    @media screen and (max-width: 375px){
+        position: relative;
+        left: 40px;
+        top: 20px;
+    }
+    @media screen and (max-width: 320px){
+        position: relative;
+        left: 30px;
+        top: 20px;
+    }
+}
+#timer{
+    color: #1e2750;
+    font-size: x-large;
+    position: relative;
+    left: 300px;
+    bottom: 200px;
+    @media screen and (max-width: 450px){
+        position: relative;
+        left: 70px;
+        top: 20px;
+    }
+    @media screen and (max-width: 375px){
+        position: relative;
+        left: 40px;
+        top: 20px;
+    }
+    @media screen and (max-width: 320px){
+        font-size: x-large;
+        position: relative;
+        left: 30px;
+        top: 20px;
+    }
+}
+#end{
+    width: 800px;
+    height: 100px;
+    color: #271e66;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px 10px;
+    border: 2px solid black;
+    margin-bottom: 35%;
+    text-align: center;
+    font-size: xx-large;
+    @media screen and (max-width: 450px){
+        width: 350px;
+        height: 50px;
+        margin-bottom: 0px;
+        font-size: x-large;
+        position: relative;
+        left: 0px;
+        bottom: 60px;
+    }
+    @media screen and (max-width: 375px){
+        width: 280px;
+        height: 50px;
+        margin-bottom: 0px;
+        font-size: larger;
+        position: relative;
+        left: 0px;
+        bottom: 60px;
+    }
+    @media screen and (max-width: 320px){
+        width: 250px;
+        height: 40px;
+        margin-bottom: 0px;
+        font-size: larger;
+        position: relative;
+        left: 0px;
+        bottom: 60px;
+    }
+}
+#endscore{
+    font-size: 100px;
+    @media screen and (max-width: 450px){
+        font-size: 60px;
+    }
+    @media screen and (max-width: 375px){
+        font-size: 45px;
+    }
+    @media screen and (max-width: 320px){
+        font-size: 40px;
+    }
+}
+#highscore{
+    color: #1e2750;
+    font-size: x-large;
+    position: relative;
+    left: 300px;
+    bottom: 200px;
+    @media screen and (max-width: 450px){
+        position: relative;
+        left: 70px;
+        top: 0px;
+    }
+    @media screen and (max-width: 375px){
+        position: relative;
+        left: 20px;
+        top: 0px;
+    }
+    @media screen and (max-width: 320px){
+        position: relative;
+        left: 10px;
+        top: 0px;
+    }
+}
+#endbtn{
+    position: relative;
+    left: 200px;
+    bottom: 150px;
+    @media screen and (max-width: 450px){
+        left: 30px;
+        top: 20px;
+    }
+    @media screen and (max-width: 375px){
+        left: 25px;
+        bottom: 0px;
+    }
+    @media screen and (max-width: 320px){
+        left: 20px;
+        bottom: 0px;
+    }
+}
+#home{
+    width: 130px;
+    height: 40px;
+    background-color: rgb(255, 177, 60);
+    color: rgb(24, 30, 114);
+    border-radius: 25px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    font-size: x-large;
+    margin-top: 20px;
+    @media screen and (max-width: 450px){
+        width: 110px;
+        font-size: large;
+    }
+    @media screen and (max-width: 375px){
+        width: 100px;
+        font-size: large;
+    }
+    @media screen and (max-width: 320px){
+        width: 80px;
+        font-size: medium;
+    }
+}
+#home2{
+    width: 150px;
+    font-size: x-large;
+    border-radius: 5px;
+    background-color: #a4abff;
+    margin-bottom: 40px;
+    position: relative;
+    left: 0px;
+    bottom: 300px;
+}
+#home3{
+    width: 150px;
+    font-size: x-large;
+    border-radius: 5px;
+    background-color: #a4abff;
+    margin-bottom: 40px;
+    position: relative;
+    left: 180px;
+    bottom: 100px;
+}
+#home:hover{
+    background-color: #ff9011;
+    color: #344ec2;
+}
+#again{
+    width: 250px;
+    height: 60px;
+    background-color: rgb(248, 91, 91);
+    color: white;
+    border-radius: 25px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    font-size: xx-large;
+    margin-top: 20px;
+    position: relative;
+    left: 50px;
+    @media screen and (max-width: 450px){
+        font-size: x-large;
+        width: 200px;
+        height: 50px;
+        left: 20px;
+    }
+    @media screen and (max-width: 375px){
+        font-size: larger;
+        width: 150px;
+        height: 50px;
+        left: 20px;
+    }
+    @media screen and (max-width: 320px){
+        font-size: large;
+        width: 130px;
+        height: 50px;
+        left: 20px;
+    }
+}
+
+#norecord{
+    font-size: xx-large;
+    position: relative;
+    right: 30px;
+
+}
+
+#boardmain{
+    width: 500px;
+    position: relative;
+    top: 50px;
+    @media screen and (max-width: 450px){
+        left: 40px;
+        top: 0px;
+    }
+    @media screen and (max-width: 375px){
+        left: 80px;
+    }
+    @media screen and (max-width: 320px){
+        left: 100px;
+    }
+}
+
+#scoreboardtitle{
+    font-size: x-large;
+    border: 2px solid black;
+    background-color: #fac7ff;
+    padding: 5px;
+    border-radius: 10px;
+    position: relative;
+    right: 40px;
+    bottom: 40px;
+}
+
+#besttitle{
+    font-size: x-large;
+    border: 2px solid black;
+    background-color: #e8d2fd;
+    padding: 5px;
+    border-radius: 10px;
+    position: relative;
+    left: 115px;
+    bottom: 40px;
+}
+
+#maintitlecon{
+    width: 550px;
+    height: 40px;
+    font-size: x-large;
+    position: relative;
+    @media screen and (max-width: 450px){
+        left: 40px;
+    }
+    @media screen and (max-width: 375px){
+        left: 30px;
+    }
+    @media screen and (max-width: 320px){
+        left: 30px;
+    }
+}
+
+#numtitle{
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    border: 2px solid black;
+    position: relative;
+    left: 0px;
+    top: 11px;
+    color: #16863b;
+    @media screen and (max-width: 450px){
+        padding-left: 23px;
+        padding-right: 23px;
+    }
+    @media screen and (max-width: 375px){
+        padding-left: 23px;
+        padding-right: 23px;
+    }
+    @media screen and (max-width: 320px){
+        padding-left: 23px;
+        padding-right: 23px;
+    }
+}
+
+#scoretitle{
+    padding-left: 30px;
+    padding-right: 23px;
+    padding-top: 10px;
+    border: 2px solid black;
+    position: relative;
+    right: 8px;
+    top: 11px;
+    color: #0f0099;
+    @media screen and (max-width: 450px){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media screen and (max-width: 375px){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media screen and (max-width: 320px){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+#timetitle{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    border: 2px solid black;
+    position: relative;
+    right: 16px;
+    top: 11px;
+    color: #757306;
+    @media screen and (max-width: 450px){
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+    @media screen and (max-width: 375px){
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    @media screen and (max-width: 320px){
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+}
+
+#difftitle{
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 10px;
+    border: 2px solid black;
+    position: relative;
+    right: 24px;
+    top: 11px;
+    color: #df0000;
+    @media screen and (max-width: 450px){
+        padding-left: 5px;
+        padding-right: 3px;
+    }
+    @media screen and (max-width: 375px){
+        padding-left: 5px;
+        padding-right: 3px;
+    }
+    @media screen and (max-width: 320px){
+        padding-left: 5px;
+        padding-right: 3px;
+    }
+}
+
+#main{
+    width: 500px;
+    height: 562px;
+    text-align: center;
+    font-size: x-large;
+    position: relative;
+    top: 0px;
+    @media screen and (max-width: 450px){
+        font-size: larger;
+        width: 400px;
+        height: 300px;
+        left: 40px;
+    }
+    @media screen and (max-width: 375px){
+        font-size: large;
+        width: 350px;
+        height: 400px;
+        left: 30px;
+    }
+    @media screen and (max-width: 320px){
+        font-size: larger;
+        width: 300px;
+        height: 350px;
+        left: 30px;
+    }
+}
+
+#numlablecon{
+    width: 125px;
+    height: 540px;
+    padding-top: 20px;
+    border: 2px solid black;
+    background-color: #b6f79c;
+    position: absolute;
+    @media screen and (max-width: 450px){
+        width: 100px;
+    }
+    @media screen and (max-width: 375px){
+        width: 100px;
+    }
+    @media screen and (max-width: 320px){
+        width: 100px;
+    }
+}
+
+#scorelablecon{
+    width: 125px;
+    height: 540px;
+    padding-top: 20px;
+    border: 2px solid black;
+    background-color: #8cbdfd;
+    position: absolute;
+    left: 125px;
+    @media screen and (max-width: 450px){
+        width: 100px;
+        left: 101px;
+    }
+    @media screen and (max-width: 375px){
+        width: 100px;
+    }
+    @media screen and (max-width: 320px){
+        width: 100px;
+    }
+}
+
+#timelablecon{
+    width: 125px;
+    height: 540px;
+    padding-top: 20px;
+    border: 2px solid black;
+    background-color: #fdf57b;
+    position: absolute;
+    left: 250px;
+    @media screen and (max-width: 450px){
+        width: 100px;
+        left: 202px;
+    }
+    @media screen and (max-width: 375px){
+        width: 100px;
+    }
+    @media screen and (max-width: 320px){
+        width: 100px;
+    }
+}
+
+#difflablecon{
+    width: 120px;
+    height: 540px;
+    padding-top: 20px;
+    font-size: 22px;
+    border: 2px solid black;
+    background-color: #ff8484;
+    position: absolute;
+    left: 377px;
+    @media screen and (max-width: 450px){
+        width: 100px;
+        left: 303px;
+    }
+    @media screen and (max-width: 375px){
+        width: 100px;
+    }
+    @media screen and (max-width: 320px){
+        width: 100px;
+    }
+}
+
+
+
+
+
